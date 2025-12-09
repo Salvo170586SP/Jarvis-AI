@@ -1,14 +1,10 @@
 async function sendPrompt(question) {
-    const apiKey = 'TUA APYKEY';
+    const apiKey = 'LA TUA APIKEY';
     const model = 'gemini-2.5-flash-lite';
 
-    const context = `Sei un assistente intelligente per un gestionale Laravel. Puoi vedere il contesto della pagina corrente: 
-                    Quando l'utente ti chiede come fare qualcosa:
-                    1. Guarda gli elementi disponibili nella pagina
-                    2. Suggerisci l'azione più diretta
-                    3. Spiega dove trovare quello che cerca
-                    4. Sii conciso e pratico
-                    Se la pagina non contiene ciò che cerca, suggerisci dove potrebbe trovarlo nel gestionale.`;
+    const context = `Sei Jarvis, un assistente intelligente per assistermi negli allenamenti. Cerca di dare risposte professionali, concise e abbastanza brevi in base alla tua skill come personal trainer. 
+                    Quando l'utente ti chiede come fare qualcosa che va al di fuori delle tue competenze, rispondi "Non posso rispondere in base alla tua richiesta, 
+                    sono un personal trainer. Riformula la domanda!"`;
 
 
     const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`;
